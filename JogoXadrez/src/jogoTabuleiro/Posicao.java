@@ -21,6 +21,16 @@ public class Posicao {
 		return coluna;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(linha);
+		sb.append(", ");
+		sb.append(coluna);
+		
+		return sb.toString();
+	}
+	
 	public void setValores(Integer linha, Integer coluna) {
 		this.coluna = coluna;
 		this.linha = linha;		

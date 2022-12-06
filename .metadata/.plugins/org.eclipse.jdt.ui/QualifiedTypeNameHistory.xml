@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="jogoTabuleiro.Peca"/>
+    <fullyQualifiedTypeName name="jogoTabuleiro.Tabuleiro"/>
+    <fullyQualifiedTypeName name="xadrez.PartidaDeXadrez"/>
+    <fullyQualifiedTypeName name="xadrez.Cor"/>
+    <fullyQualifiedTypeName name="xadrez.pecas.Torre"/>
+    <fullyQualifiedTypeName name="xadrez.pecas.Rei"/>
+    <fullyQualifiedTypeName name="jogoTabuleiro.TabuleiroException"/>
+    <fullyQualifiedTypeName name="xadrez.XadrezException"/>
+    <fullyQualifiedTypeName name="jogoTabuleiro.Posicao"/>
+    <fullyQualifiedTypeName name="xadrez.PecaDeXadrez"/>
+    <fullyQualifiedTypeName name="xadrez.PosicaoXadrez"/>
+</qualifiedTypeNameHistroy>
