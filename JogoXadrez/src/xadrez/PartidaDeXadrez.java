@@ -1,5 +1,6 @@
 package xadrez;
 
+import jogoTabuleiro.Peca;
 import jogoTabuleiro.Posicao;
 import jogoTabuleiro.Tabuleiro;
 import xadrez.pecas.Rei;
@@ -22,6 +23,43 @@ public class PartidaDeXadrez {
 			}
 		}
 		return mat;
+	}
+	
+	public boolean[][] movimentosPossiveis(PosicaoXadrez posicaoOrigem) {
+		Posicao posicao = posicaoOrigem.paraPosicao();
+		validarPosicaoOrigem(posicao);
+		return tabuleiro.peca(posicao).movimentosPossiveis();
+	}
+	
+	public PecaDeXadrez execMovimentoPeca (PosicaoXadrez posicaoOrigem, PosicaoXadrez posicaoDestino) {
+		Posicao origem = posicaoOrigem.paraPosicao();
+		Posicao destino = posicaoDestino.paraPosicao();
+		validarPosicaoOrigem(origem);
+		validarPosicaoDestino(origem, destino);
+		Peca pecaCapturada = realizarMovimento(origem, destino);
+		return (PecaDeXadrez)pecaCapturada;
+	}
+	
+	private Peca realizarMovimento(Posicao posicaoOrigem, Posicao posicaoDestino) {
+		Peca p = tabuleiro.removerPeca(posicaoOrigem);
+		Peca pecaCapturada = tabuleiro.removerPeca(posicaoDestino);
+		tabuleiro.colocarPeca(p, posicaoDestino);
+		return pecaCapturada;
+	}
+	
+	private void validarPosicaoOrigem(Posicao posicao) {
+		if (!tabuleiro.temUmaPeca(posicao)) {
+			throw new XadrezException("Nao existe peca na posicao de origem!");
+		}
+		if (!tabuleiro.peca(posicao).existeAlgumMovimentoPossivel()) {
+			throw new XadrezException("Nao existe movimentos possiveis para a peca escolhida!");
+		}
+	}
+	
+	private void validarPosicaoDestino(Posicao posicaoOrigem, Posicao posicaoDestino) {
+		if (!tabuleiro.peca(posicaoOrigem).movimentoPossivel(posicaoDestino)) {
+			throw new XadrezException("A peca escolhida nao pode se mover para a posicao de destino!");
+		}
 	}
 	
 	private void colocarNovaPeca (char coluna, Integer linha, PecaDeXadrez peca) {

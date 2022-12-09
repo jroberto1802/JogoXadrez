@@ -21,6 +21,14 @@ public class Posicao {
 		return coluna;
 	}
 	
+	public void setLinha(Integer linha) {
+		this.linha = linha;
+	}
+
+	public void setColuna(Integer coluna) {
+		this.coluna = coluna;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();

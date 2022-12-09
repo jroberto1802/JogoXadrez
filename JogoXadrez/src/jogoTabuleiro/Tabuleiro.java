@@ -9,7 +9,7 @@ public class Tabuleiro {
 	
 	public Tabuleiro(Integer linhas, Integer colunas) {
 		if (linhas < 1 || colunas < 1) {
-			throw new TabuleiroException("Erro ao criar tabuleiro: É necessário que haja uma linha ou uma coluna");
+			throw new TabuleiroException("Erro ao criar tabuleiro: E necessario que haja uma linha ou uma coluna");
 		}
 		this.linhas = linhas;
 		this.colunas = colunas;
@@ -26,21 +26,21 @@ public class Tabuleiro {
 
 	public Peca peca(Integer linha, Integer coluna) {
 		if (!posicaoExiste(linha, coluna)) {
-			throw new TabuleiroException("A posição não existe no tabuleiro!");
+			throw new TabuleiroException("A posicao nao existe no tabuleiro!");
 		}
 		return pecas[linha][coluna];
 	}
 	
 	public Peca peca(Posicao posicao) {
 		if (!posicaoExiste(posicao)) {
-			throw new TabuleiroException("A posição não existe no tabuleiro!");
+			throw new TabuleiroException("A posicao nao existe no tabuleiro!");
 		}
 		return pecas[posicao.getLinha()][posicao.getColuna()];
 	}
 	
 	public void colocarPeca(Peca peca, Posicao posicao) {
 		if (temUmaPeca(posicao)) {
-			throw new TabuleiroException("Já existe uma peça na posição " + posicao + "!");
+			throw new TabuleiroException("Ja existe uma peça na posicao " + posicao + "!");
 		}
 		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
 		peca.posicao = posicao;
@@ -56,13 +56,20 @@ public class Tabuleiro {
 	
 	public boolean temUmaPeca(Posicao posicao) {
 		if (!posicaoExiste(posicao)) {
-			throw new TabuleiroException("A posição não existe no tabuleiro!");
+			throw new TabuleiroException("A posicao nao existe no tabuleiro!");
 		}
 		return peca(posicao) != null;
 	}
 	
 	public Peca removerPeca(Posicao posicao) {
-		Peca peca = pecas[posicao.getLinha()][posicao.getColuna()];
+		if (!posicaoExiste(posicao)) {
+			throw new TabuleiroException("A posicao nao existe no tabuleiro!");
+		}
+		if (peca(posicao) == null) {
+			return null;
+		}
+		Peca peca = peca(posicao);
+		peca.posicao = null;
 		pecas[posicao.getLinha()][posicao.getColuna()] = null;
 		return peca;
 	}

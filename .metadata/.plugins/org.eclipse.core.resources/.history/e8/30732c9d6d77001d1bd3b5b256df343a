@@ -1,0 +1,21 @@
+package application;
+
+import java.util.Scanner;
+
+import xadrez.PartidaDeXadrez;
+import xadrez.PosicaoXadrez;
+
+public class Program {
+	public static void main(String[] args) {
+		
+		PartidaDeXadrez partidaDeXadrez = new PartidaDeXadrez();
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			UI.printTabuleiro(partidaDeXadrez.getPecas());
+			System.out.println();
+			System.out.println("Origem: ");
+			PosicaoXadrez origem = UI.LerPosicaoXadrez(sc);
+		}
+	}
+}
