@@ -261,7 +261,7 @@ public class PartidaDeXadrez {
 	}
 	
 	private Cor oponente(Cor cor) {
-		return (cor == Cor.BRANCO) ? Cor.PRETO : Cor.BRANCO;
+		return (cor == cor.BRANCO) ? cor.PRETO : cor.BRANCO;
 	}
 	
 	private PecaDeXadrez rei(Cor cor) {

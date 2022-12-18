@@ -41,12 +41,8 @@ public class Program {
 				
 				if (partidaDeXadrez.getPromocao() != null) {
 					System.out.println("Digite a peca para promocao (B/C/A/T): ");
-					String tipo = sc.nextLine().toUpperCase();
-					while(!tipo.equals("B") && !tipo.equals("C") && !tipo.equals("A") && !tipo.equals("T")) {
-						System.out.println("Valor invalido! Digite a peca para promocao (B/C/A/T): ");
-						tipo = sc.nextLine().toUpperCase();
-					}
-					partidaDeXadrez.trocarPecaPromovida(tipo);
+					String tipo = sc.nextLine();
+					partidaDeXadrez.
 				}
 			}
 			catch(XadrezException e) {
