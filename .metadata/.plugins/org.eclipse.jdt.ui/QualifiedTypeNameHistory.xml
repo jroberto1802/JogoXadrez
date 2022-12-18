@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="jogoTabuleiro.Peca"/>
     <fullyQualifiedTypeName name="jogoTabuleiro.Tabuleiro"/>
-    <fullyQualifiedTypeName name="xadrez.PartidaDeXadrez"/>
-    <fullyQualifiedTypeName name="xadrez.Cor"/>
     <fullyQualifiedTypeName name="xadrez.pecas.Torre"/>
-    <fullyQualifiedTypeName name="xadrez.pecas.Rei"/>
+    <fullyQualifiedTypeName name="jogoTabuleiro.Peca"/>
     <fullyQualifiedTypeName name="jogoTabuleiro.TabuleiroException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="xadrez.PosicaoXadrez"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="xadrez.PecaDeXadrez"/>
+    <fullyQualifiedTypeName name="javax.swing.text.Position"/>
+    <fullyQualifiedTypeName name="xadrez.pecas.Bispo"/>
+    <fullyQualifiedTypeName name="xadrez.pecas.Rainha"/>
+    <fullyQualifiedTypeName name="xadrez.Cor"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
+    <fullyQualifiedTypeName name="xadrez.pecas.Rei"/>
+    <fullyQualifiedTypeName name="xadrez.PartidaDeXadrez"/>
     <fullyQualifiedTypeName name="xadrez.XadrezException"/>
     <fullyQualifiedTypeName name="jogoTabuleiro.Posicao"/>
-    <fullyQualifiedTypeName name="xadrez.PecaDeXadrez"/>
-    <fullyQualifiedTypeName name="xadrez.PosicaoXadrez"/>
+    <fullyQualifiedTypeName name="xadrez.pecas.Peao"/>
+    <fullyQualifiedTypeName name="xadrez.pecas.Cavalo"/>
 </qualifiedTypeNameHistroy>
